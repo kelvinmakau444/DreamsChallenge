@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Interview Incentro</string>
+    <string-array name="labels">
+        <item>blood</item>
+        <item>flower</item>
+        <item>flying</item>
+        <item>horror</item>
+    </string-array>
+</resources>
