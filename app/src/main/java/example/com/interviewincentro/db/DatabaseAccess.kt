@@ -65,14 +65,10 @@ class DatabaseAccess(internal var context: Context) {
         db!!.execSQL("CREATE TABLE IF NOT EXISTS Dream(title VARCHAR UNIQUE,day VARCHAR,description VARCHAR,label VARCHAR);")
 
 
-        val TITLE = fDream.dreamtitle
-        val DAY = fDream.day
-        val DESCRIPTION = fDream.description
-        val LABEL = fDream.label
 
 
         try {
-            val query = "INSERT  INTO Dream VALUES ($TITLE ,$DAY ,$DESCRIPTION ,$LABEL);"
+            val query = "INSERT  INTO Dream VALUES (${fDream.dreamtitle} ,${fDream.day} ,${fDream.description} ,${fDream.label});"
             db!!.execSQL(query)
             Toast.makeText(context, "Successfully saved to your dream list", Toast.LENGTH_LONG).show()
 
